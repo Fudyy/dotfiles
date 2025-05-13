@@ -1,7 +1,7 @@
 #!/bin/bash
 export PATH="$HOME/.local/bin/:$PATH"
 HYPRPAPER_CONFIG_FILE="$HOME/.config/hypr/hyprpaper.conf"
-WALLPAPER_DIR="$HOME/Pictures/Wallpapers/"
+WALLPAPER_DIR="$HOME/Wallpapers/"
 
 # FOLDER EXISTS VERIFICATION
 if [ ! -d "$WALLPAPER_DIR" ]; then
