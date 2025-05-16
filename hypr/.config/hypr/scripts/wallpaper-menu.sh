@@ -16,9 +16,8 @@ SELECTED=$(find -L "$WALLPAPER_DIR" -type f \( -iname "*.jpg" -o -iname "*.png" 
 
 # HYPRPAPER CONFIG
 wal -i "$SELECTED" --cols16
-hyprctl hyprpaper reload ,"$SELECTED"
 echo "preload = $SELECTED" > "$HYPRPAPER_CONFIG_FILE"
 echo "wallpaper = $MONITOR_NAME,$SELECTED" >> "$HYPRPAPER_CONFIG_FILE"
-
+hyprpaper reload
 
 notify-send -i $SELECTED "Wallpaper updated" "$(basename "$SELECTED")"
