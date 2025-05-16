@@ -10,7 +10,7 @@ if [ ! -d "$WALLPAPER_DIR" ]; then
   exit 1
 fi
 
-SELECTED=$(find -L "$WALLPAPER_DIR" -type f \( -iname "*.jpg" -o -iname "*.png" -o -iname "*.jpeg" -o -iname "*.webp" \) | wofi --dmenu --prompt "Select a wallpaper")
+SELECTED=$(find -L "$WALLPAPER_DIR" -type f \( -iname "*.jpg" -o -iname "*.png" -o -iname "*.jpeg" -o -iname "*.webp" \) | rofi -dmenu -p "Select a wallpaper")
 
 [ -z "$SELECTED" ] && exit 0
 
