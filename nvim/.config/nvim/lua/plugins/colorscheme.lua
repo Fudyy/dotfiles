@@ -8,7 +8,7 @@ return {
   {
     "catppuccin/nvim",
     lazy = true,
-    opt = {
+    opts = {
       transparent_background = true,
     },
   },
