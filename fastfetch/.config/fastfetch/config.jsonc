@@ -21,17 +21,22 @@
     "break",
     {
       "type": "os",
-      "key": " ",
+      "key": " ",
       "keyColor": "green"
     },
     {
       "type": "kernel",
-      "key": " ",
+      "key": "󰌽 ",
       "keyColor": "green"
     },
     {
       "type": "shell",
       "key": " ",
+      "keyColor": "green"
+    },
+    {
+      "type": "wm",
+      "key": " ",
       "keyColor": "green"
     },
     {
