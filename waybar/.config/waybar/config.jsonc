@@ -62,12 +62,12 @@
   "cava": {
 //        "cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
         "framerate": 30,
-        "autosens": 0,
-        "sensitivity": 60,
+        "autosens": 1,
+//        "sensitivity": 2,
         "bars": 14,
         "lower_cutoff_freq": 50,
         "higher_cutoff_freq": 10000,
-        "method": "pulse",
+        "method": "pipewire",
         "source": "auto",
         "stereo": true,
         "reverse": false,
@@ -77,9 +77,6 @@
         "noise_reduction": 0.77,
         "input_delay": 2,
         "format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
-        "actions": {
-                   "on-click-right": "mode"
-                   }
     },
 
   "pulseaudio": {
