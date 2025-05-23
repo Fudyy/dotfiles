@@ -1,0 +1,128 @@
+{
+  "margin-top": 0,
+  "margin-left": 120,
+  "margin-bottom": 0,
+  "margin-right": 120,
+  "height": 60, 
+  "layer": "top",
+  "position": "top",
+  "spacing": 15,
+  "modules-left": ["custom/launcher", "clock", "hyprland/window"], 
+  "modules-center": ["hyprland/workspaces"],
+  "modules-right": ["group/audio", "memory", "cpu", "tray"],
+
+  "hyprland/window": {
+    "format": " {title}",
+    "max-length": 30,
+  },
+
+  "hyprland/workspaces": {
+      "format": "{name}",
+      "persistent-workspaces": {
+        "DP-1": [1,2,3],
+        "HDMI-A-1": [4,5,6]
+      },
+  },
+  
+  "custom/launcher": {
+      "interval": "once",
+      "format": "󰣇",
+      "on-click": "pkill rofi || rofi -show drun drun -show-icons 'Papirus'", 
+      "tooltip": false
+    },
+
+
+  "memory": {
+    "interval": 30,
+    "format": " {percentage}%",
+    "tooltip-format":"{used:0.1f}G",
+    "max-length": 10,
+    "on-click": "kitty btop"
+  },
+
+  "cpu": {
+    "format": " {usage}%",
+    "max-length": 10
+  },
+  
+  "tray": {
+    "icon-size": 21,
+    "spacing": 10,
+    "show-passive-items": true
+  },
+
+  "group/audio": {
+    "orientation": "horizontal",
+    "modules": [
+      "cava",
+      "pulseaudio"
+    ]
+  },
+
+  "cava": {
+//        "cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
+        "framerate": 30,
+        "autosens": 0,
+        "sensitivity": 60,
+        "bars": 14,
+        "lower_cutoff_freq": 50,
+        "higher_cutoff_freq": 10000,
+        "method": "pulse",
+        "source": "auto",
+        "stereo": true,
+        "reverse": false,
+        "bar_delimiter": 0,
+        "monstercat": false,
+        "waves": false,
+        "noise_reduction": 0.77,
+        "input_delay": 2,
+        "format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
+        "actions": {
+                   "on-click-right": "mode"
+                   }
+    },
+
+  "pulseaudio": {
+      "format": "{icon} {volume}%",
+      "format-bluetooth": "{icon}  {volume}%",
+      "format-bluetooth-muted": "  muted",
+      "format-muted": " muted",
+      "format-icons": {
+          "headphone": "",
+          "hands-free": "󰥰",
+          "headset": "",
+          "phone": "",
+          "portable": "",
+          "car": "",
+          "default": ["", "", ""]
+      },
+      "on-click-right": "pavucontrol",
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+  },
+
+"clock": {
+    "format": " {:%H:%M}",
+  "locale": "es_CL.UTF-8",
+"tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+                    "mode"          : "year",
+                    "mode-mon-col"  : 3,
+                    "weeks-pos"     : "right",
+                    "on-scroll"     : 1,
+                    "format": {
+                              "months":     "<span color='#ffead3'><b>{}</b></span>",
+                              "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+                              "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+                              "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+                              "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+                              }
+                    },
+  },
+
+
+"custom/powermenu": {
+    "format": "",
+    "on-click": "pkill wofi || sh .config/wofi/scripts/powermenu.sh 'everforest-light' '--height=17% -o $MAIN_DISPLAY'",
+    "tooltip": false
+  }
+}
