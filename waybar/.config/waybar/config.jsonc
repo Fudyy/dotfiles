@@ -7,14 +7,9 @@
   "layer": "top",
   "position": "top",
   "spacing": 15,
-  "modules-left": ["custom/launcher", "clock", "hyprland/window"], 
+  "modules-left": ["custom/launcher", "clock"], 
   "modules-center": ["hyprland/workspaces"],
   "modules-right": ["group/audio", "memory", "cpu", "tray"],
-
-  "hyprland/window": {
-    "format": " {title}",
-    "max-length": 30,
-  },
 
   "hyprland/workspaces": {
       "format": "{name}",
@@ -99,27 +94,6 @@
 
 "clock": {
     "format": " {:%H:%M}",
-  "locale": "es_CL.UTF-8",
-"tooltip-format": "<tt><small>{calendar}</small></tt>",
-        "calendar": {
-                    "mode"          : "year",
-                    "mode-mon-col"  : 3,
-                    "weeks-pos"     : "right",
-                    "on-scroll"     : 1,
-                    "format": {
-                              "months":     "<span color='#ffead3'><b>{}</b></span>",
-                              "days":       "<span color='#ecc6d9'><b>{}</b></span>",
-                              "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
-                              "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
-                              "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
-                              }
-                    },
-  },
-
-
-"custom/powermenu": {
-    "format": "",
-    "on-click": "pkill wofi || sh .config/wofi/scripts/powermenu.sh 'everforest-light' '--height=17% -o $MAIN_DISPLAY'",
-    "tooltip": false
-  }
+    "locale": "en_US.UTF-8",
+},
 }
